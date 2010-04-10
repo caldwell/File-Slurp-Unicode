@@ -136,11 +136,11 @@ much the same as calling C<File::Slurp::write_file()> directly. This option
 is here only to make code which needs write both binary and text files look
 uniform.
 
-=head2 SEE ALSO
+=head1 SEE ALSO
 
 L<File::Slurp>
 
-=head2 BUGS
+=head1 BUGS
 
 None known. Contact author or file a bug report on CPAN if you find any.
 
