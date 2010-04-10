@@ -95,21 +95,31 @@ File::Slurp::Unicode - Reading/Writing of Complete Files with Character Encoding
 
   write_file('filename', { encoding => 'utf16' }, @lines);
 
+  # same as File::Slurp::write_file (ie. no encoding):
+  write_file('filename', { encoding => 'binary' }, @lines);
+
   use File::Slurp::Unicode qw(slurp);
 
   my $text = slurp('filename', encoding => 'latin1');
 
 =head1 DESCRIPTION
 
-This module wraps L<File::Slurp> with character encoding support. It exports
-the same functions which take all the same parameters as File::Slurp. Please
-see the L<File::Slurp> documentation for basic usage; only the differences
-are described from here on out.
+This module wraps L<File::Slurp> and adds character encoding support through
+the B<< C<encoding> >> parameter. It exports the same functions which take
+all the same parameters as File::Slurp. Please see the L<File::Slurp>
+documentation for basic usage; only the differences are described from here
+on out.
 
 =head2 B<read_file>
 
 Pass in an argument called B<< C<encoding> >> to change the file
 encoding. If no argument is passed in, UTF-8 encoding is assumed.
+
+The special encoding B<'binary'> is interpretted to mean that there should
+be no decoding done to the data after reading it. This is pretty much the
+same as calling C<File::Slurp::read_file()> directly. This option is here
+only to make code which needs to read both binary and text files look
+uniform.
 
 =head2 B<write_file>
 
@@ -117,6 +127,14 @@ Pass in an argument called B<< C<encoding> >> to change the file
 encoding. If no argument is passed in and no wide characters are present in
 the output data, then no conversion will be done. If there are wide
 characters in the output data then UTF-8 encoding is assumed.
+
+The special encoding B<'binary'> is interpretted to mean that there should
+be no encoding done to the data before writing. If you pass a wide string (a
+string with perl's internal 'utf8 bit' set) to C<write_file> and set the
+encoding to 'binary' it will die with an appropriate message. This is pretty
+much the same as calling C<File::Slurp::write_file()> directly. This option
+is here only to make code which needs write both binary and text files look
+uniform.
 
 =head2 SEE ALSO
 
