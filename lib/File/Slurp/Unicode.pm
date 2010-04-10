@@ -139,4 +139,8 @@ David Caldwell E<lt>david@porkrind.orgE<gt>
 
 L<http://porkrind.org/>
 
+=head1 PROJECT HOME
+
+L<http://github.com/caldwell/File-Slurp-Unicode>
+
 =cut
