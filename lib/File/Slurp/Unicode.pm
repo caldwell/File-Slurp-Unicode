@@ -115,7 +115,7 @@ on out.
 Pass in an argument called B<< C<encoding> >> to change the file
 encoding. If no argument is passed in, UTF-8 encoding is assumed.
 
-The special encoding B<'binary'> is interpretted to mean that there should
+The special encoding B<'binary'> is interpreted to mean that there should
 be no decoding done to the data after reading it. This is pretty much the
 same as calling C<File::Slurp::read_file()> directly. This option is here
 only to make code which needs to read both binary and text files look
@@ -128,9 +128,9 @@ encoding. If no argument is passed in and no wide characters are present in
 the output data, then no conversion will be done. If there are wide
 characters in the output data then UTF-8 encoding is assumed.
 
-The special encoding B<'binary'> is interpretted to mean that there should
+The special encoding B<'binary'> is interpreted to mean that there should
 be no encoding done to the data before writing. If you pass a wide string (a
-string with perl's internal 'utf8 bit' set) to C<write_file> and set the
+string with Perl's internal 'utf8 bit' set) to C<write_file> and set the
 encoding to 'binary' it will die with an appropriate message. This is pretty
 much the same as calling C<File::Slurp::write_file()> directly. This option
 is here only to make code which needs write both binary and text files look
