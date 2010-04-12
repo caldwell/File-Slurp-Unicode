@@ -2,7 +2,7 @@
 
 package File::Slurp::Unicode; use strict; use warnings;
 
-our $VERSION = '0.7.0';
+our $VERSION = '0.7.1';
 
 use base 'Exporter' ;
 our %EXPORT_TAGS = ( 'all' => [ qw( read_file write_file append_file read_dir ) ] ) ;
