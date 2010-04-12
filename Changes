@@ -1,3 +1,9 @@
+File::Slurp::Unicode (0.7.1)
+
+  * Added File::Slurp to dependencies. Not a core module after all. :-(
+
+ -- David Caldwell <david@porkrind.org>  Sun, 11 Apr 2010 17:06:28 -0700
+
 File::Slurp::Unicode (0.7.0)
 
   * First release to CPAN
