@@ -1,7 +1,7 @@
 File::Slurp::Unicode
 ====================
 
-# This Module is obsolete.
+# This module is obsolete.
 
 File::Slurp::Unicode is dead, long live File::Slurp.
 
