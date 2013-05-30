@@ -23,7 +23,8 @@ This module wraps the standard File::Slurp package and adds character
 encoding support.
 
 For full documentation, run:
-  perldoc lib/File/Slurp/Unicode.pm
+
+    perldoc lib/File/Slurp/Unicode.pm
 
 
 Installation
@@ -31,10 +32,10 @@ Installation
 
 To build, test and install:
 
- perl Build.PL
-  ./Build
-  ./Build test
-  ./Build install
+     perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
 
 
 License
